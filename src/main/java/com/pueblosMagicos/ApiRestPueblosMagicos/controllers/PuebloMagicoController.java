@@ -52,13 +52,17 @@ public class PuebloMagicoController {
     // Manejo de errores
     @CrossOrigin(origins = "*")
     @GetMapping("/obtenerPueblos/")
-    public String obtenerPueblosMagicosError() {
-        return "Selecciona el estado";
+    public ArrayList<String>  obtenerPueblosMagicosError() {
+        ArrayList<String> errorPueblos = new ArrayList<String>();
+        errorPueblos.add("Selecciona el estado");
+        return errorPueblos;
     }
 
     @CrossOrigin(origins = "*")
     @GetMapping("/obtenerDireccion/")
-    public String obtenerDireccionPuebloMagicoError() {
-        return "Selecciona el pueblo mágico";
+    public ArrayList<String> obtenerDireccionPuebloMagicoError() {
+        ArrayList<String> errorDireccion = new ArrayList<String>();
+        errorDireccion.add("Selecciona el Pueblo Mágico");
+        return errorDireccion;
     }
 }
